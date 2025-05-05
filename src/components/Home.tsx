@@ -16,7 +16,7 @@ const Home = () => {
 <p>
   Let’s bring your vision to life on the web!
 </p>
-        <a href="src/public/resume.pdf" download className="btn">Download CV</a>
+        <a href="/resume.pdf" download className="btn">Download CV</a>
       </motion.div>
       <motion.img src={profile} alt="Profile" className="home-img" initial={{ x: 100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} />
     </section>
