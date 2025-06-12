@@ -16,9 +16,11 @@ import {
   SiSelenium,
   SiPostman,
   SiJira,
-  SiTestinglibrary
+  SiTestinglibrary,
+  SiPlaywright,
+  SiMocha
 } from "react-icons/si";
-import { Bug, TestTube, Shield, Zap } from "lucide-react";
+import { Bug, TestTube, Shield, Zap, FileCheck, Search, AlertTriangle } from "lucide-react";
 
 export const frontendSkills = [
   { name: "HTML5", icon: FaHtml5, color: "text-orange-500" },
@@ -29,7 +31,7 @@ export const frontendSkills = [
   { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-teal-500" },
   { name: "Vite", icon: SiVite, color: "text-purple-500" },
   { name: "Node.js", icon: FaNodeJs, color: "text-green-600" },
-  { name: "GitHub", icon: FaGithub, color: "text-gray-800" },
+  { name: "GitHub", icon: FaGithub, color: "text-gray-800 dark:text-gray-200" },
   { name: "Figma", icon: FaFigma, color: "text-pink-500" },
 ];
 
@@ -39,10 +41,15 @@ export const testingSkills = [
   { name: "Jest", icon: SiJest, color: "text-red-600" },
   { name: "React Testing Library", icon: SiTestinglibrary, color: "text-red-500" },
   { name: "Cypress", icon: SiCypress, color: "text-green-600" },
+  { name: "Playwright", icon: SiPlaywright, color: "text-green-500" },
   { name: "Selenium", icon: SiSelenium, color: "text-green-500" },
+  { name: "Mocha", icon: SiMocha, color: "text-brown-600" },
   { name: "API Testing", icon: SiPostman, color: "text-orange-500" },
   { name: "Bug Tracking", icon: Bug, color: "text-red-500" },
   { name: "Quality Assurance", icon: Shield, color: "text-blue-500" },
+  { name: "Test Planning", icon: FileCheck, color: "text-purple-600" },
+  { name: "Regression Testing", icon: Search, color: "text-indigo-600" },
+  { name: "Performance Testing", icon: AlertTriangle, color: "text-yellow-600" },
   { name: "JIRA", icon: SiJira, color: "text-blue-600" },
 ];
 
@@ -56,5 +63,7 @@ export const softSkills = [
   "Time Management",
   "Critical Thinking",
   "Adaptability",
-  "Documentation"
+  "Documentation",
+  "Leadership",
+  "Creativity"
 ];

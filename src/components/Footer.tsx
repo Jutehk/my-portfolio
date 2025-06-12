@@ -28,7 +28,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white relative overflow-hidden">
+    <footer className="bg-gray-900 dark:bg-gray-950 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.05%22%3E%3Ccircle cx=%2230%22 cy=%2230%22 r=%221%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40" />
       
@@ -88,7 +88,7 @@ const Footer = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-gray-800 rounded-full text-gray-400 hover:text-white hover:bg-gray-700 transition-all duration-300"
+                    className="p-3 bg-gray-800 dark:bg-gray-900 rounded-full text-gray-400 hover:text-white hover:bg-gray-700 dark:hover:bg-gray-800 transition-all duration-300"
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -100,7 +100,7 @@ const Footer = () => {
           </div>
 
           {/* Divider */}
-          <div className="border-t border-gray-800 my-8" />
+          <div className="border-t border-gray-800 dark:border-gray-700 my-8" />
 
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { Download, ArrowRight, Code, TestTube } from 'lucide-react';
-import profile from '../assets/profile.jpg';
+import { ArrowRight, Code, TestTube, Sparkles } from 'lucide-react';
+import ProfileSidebar from './ProfileSidebar';
 
 const Home = () => {
   const containerVariants = {
@@ -27,60 +27,67 @@ const Home = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center section-padding pt-24">
+    <section id="home" className="min-h-screen flex items-center section-padding pt-24 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
       <div className="container">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid lg:grid-cols-2 gap-12 items-center"
+          className="grid lg:grid-cols-3 gap-12 items-start"
         >
-          {/* Text Content */}
-          <div className="space-y-8">
-            <motion.div variants={itemVariants} className="space-y-4">
+          {/* Profile Sidebar */}
+          <div className="lg:order-1 order-2">
+            <ProfileSidebar />
+          </div>
+
+          {/* Main Content */}
+          <div className="lg:col-span-2 lg:order-2 order-1 space-y-8">
+            <motion.div variants={itemVariants} className="space-y-6">
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-100 to-secondary-100 rounded-full text-sm font-medium text-primary-700"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-100 to-secondary-100 dark:from-primary-900/30 dark:to-secondary-900/30 rounded-full text-sm font-medium text-primary-700 dark:text-primary-300"
               >
-                <span className="w-2 h-2 bg-accent-500 rounded-full animate-pulse" />
+                <Sparkles className="w-4 h-4 animate-pulse" />
                 Available for Internship
               </motion.div>
               
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Hello, I'm{' '}
-                <span className="gradient-text">Juliana</span>
-              </h1>
-              
-              <div className="flex items-center gap-4 text-xl md:text-2xl text-gray-600">
-                <motion.div
-                  className="flex items-center gap-2"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <Code className="text-primary-600" size={24} />
-                  <span>Frontend Developer</span>
-                </motion.div>
-                <span className="text-gray-400">•</span>
-                <motion.div
-                  className="flex items-center gap-2"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <TestTube className="text-secondary-600" size={24} />
-                  <span>Software Tester</span>
-                </motion.div>
+              <div className="space-y-4">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-gray-900 dark:text-white">
+                  Hello, I'm{' '}
+                  <span className="gradient-text block">Juliana Ndunge</span>
+                </h1>
+                
+                <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-xl md:text-2xl text-gray-600 dark:text-gray-300">
+                  <motion.div
+                    className="flex items-center gap-2"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <Code className="text-primary-600 dark:text-primary-400" size={24} />
+                    <span>Frontend Developer</span>
+                  </motion.div>
+                  <span className="hidden sm:block text-gray-400">•</span>
+                  <motion.div
+                    className="flex items-center gap-2"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <TestTube className="text-secondary-600 dark:text-secondary-400" size={24} />
+                    <span>Software Tester</span>
+                  </motion.div>
+                </div>
               </div>
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-6">
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
                 A passionate Mathematics and Computer Science student graduating from{' '}
-                <span className="font-semibold text-primary-600">Kenyatta University</span> this December,
+                <span className="font-semibold text-primary-600 dark:text-primary-400">Kenyatta University</span> this December,
                 and completing Software Testing certification at{' '}
-                <span className="font-semibold text-secondary-600">PLP Academy</span> this August.
+                <span className="font-semibold text-secondary-600 dark:text-secondary-400">PLP Academy</span> this August.
               </p>
               
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                 I specialize in creating beautiful, responsive web applications and ensuring software quality 
                 through comprehensive testing strategies. I'm seeking an internship opportunity to apply my 
                 dual expertise in development and testing.
@@ -92,96 +99,48 @@ const Home = () => {
               className="flex flex-col sm:flex-row gap-4"
             >
               <motion.a
-                href="/resume.pdf"
-                download
+                href="#contact"
                 className="btn-primary group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Download size={20} />
-                Download CV
+                Let's Connect
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </motion.a>
               
               <motion.a
-                href="#contact"
+                href="#projects"
                 className="btn-secondary"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Let's Connect
+                View My Work
               </motion.a>
             </motion.div>
 
             {/* Stats */}
             <motion.div
               variants={itemVariants}
-              className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200"
+              className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-gray-200 dark:border-gray-700"
             >
               <div className="text-center">
-                <div className="text-2xl font-bold gradient-text">2025</div>
-                <div className="text-sm text-gray-600">Graduate</div>
+                <div className="text-2xl md:text-3xl font-bold gradient-text">2025</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Graduate</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold gradient-text">10+</div>
-                <div className="text-sm text-gray-600">Projects</div>
+                <div className="text-2xl md:text-3xl font-bold gradient-text">10+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Projects</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold gradient-text">2</div>
-                <div className="text-sm text-gray-600">Specializations</div>
+                <div className="text-2xl md:text-3xl font-bold gradient-text">2</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Specializations</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold gradient-text">100%</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Dedicated</div>
               </div>
             </motion.div>
           </div>
-
-          {/* Profile Image */}
-          <motion.div
-            variants={itemVariants}
-            className="relative flex justify-center lg:justify-end"
-          >
-            <div className="relative">
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-primary-400 to-secondary-400 rounded-full blur-2xl opacity-30"
-                animate={{
-                  scale: [1, 1.1, 1],
-                  rotate: [0, 180, 360],
-                }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
-              />
-              
-              <motion.img
-                src={profile}
-                alt="Juliana - Frontend Developer & Software Tester"
-                className="relative w-80 h-80 object-cover rounded-full shadow-2xl border-4 border-white"
-                animate={{ y: [0, -10, 0] }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-              
-              {/* Floating badges */}
-              <motion.div
-                className="absolute -top-4 -right-4 bg-white rounded-full p-3 shadow-lg"
-                animate={{ rotate: [0, 360] }}
-                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-              >
-                <Code className="text-primary-600" size={24} />
-              </motion.div>
-              
-              <motion.div
-                className="absolute -bottom-4 -left-4 bg-white rounded-full p-3 shadow-lg"
-                animate={{ rotate: [360, 0] }}
-                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-              >
-                <TestTube className="text-secondary-600" size={24} />
-              </motion.div>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+import { ThemeProvider } from './contexts/ThemeContext';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
@@ -9,16 +10,18 @@ import BackgroundElements from './components/BackgroundElements';
 
 function App() {
   return (
-    <div className="relative min-h-screen">
-      <BackgroundElements />
-      <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="relative min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+        <BackgroundElements />
+        <Navbar />
+        <Home />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 

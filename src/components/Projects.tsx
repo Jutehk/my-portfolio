@@ -39,7 +39,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="section-padding bg-gradient-to-br from-gray-50 to-white">
+    <section id="projects" className="section-padding bg-white dark:bg-gray-900">
       <div className="container">
         <motion.div
           variants={containerVariants}
@@ -50,10 +50,10 @@ const Projects = () => {
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center space-y-4">
-            <h2 className="text-4xl font-bold text-gray-900">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
               Featured <span className="gradient-text">Projects</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               A showcase of my frontend development skills through real-world projects 
               that demonstrate modern web technologies and best practices.
             </p>
@@ -73,7 +73,7 @@ const Projects = () => {
                   y: -10,
                   transition: { duration: 0.3 }
                 }}
-                className="card overflow-hidden group"
+                className="card overflow-hidden group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
               >
                 {/* Project Image */}
                 <div className="relative overflow-hidden">
@@ -90,7 +90,7 @@ const Projects = () => {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 bg-white/90 rounded-full text-gray-800 hover:bg-white transition-colors"
+                      className="p-3 bg-white/90 dark:bg-gray-800/90 rounded-full text-gray-800 dark:text-gray-200 hover:bg-white dark:hover:bg-gray-700 transition-colors"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                     >
@@ -101,7 +101,7 @@ const Projects = () => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-3 bg-white/90 rounded-full text-gray-800 hover:bg-white transition-colors"
+                        className="p-3 bg-white/90 dark:bg-gray-800/90 rounded-full text-gray-800 dark:text-gray-200 hover:bg-white dark:hover:bg-gray-700 transition-colors"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                       >
@@ -113,21 +113,21 @@ const Projects = () => {
 
                 {/* Project Content */}
                 <div className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                     {project.title}
                   </h3>
                   
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                     {project.description}
                   </p>
 
                   {/* Project Links */}
-                  <div className="flex items-center gap-4 pt-4 border-t border-gray-100">
+                  <div className="flex items-center gap-4 pt-4 border-t border-gray-100 dark:border-gray-700">
                     <motion.a
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium transition-colors"
+                      className="flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium transition-colors"
                       whileHover={{ x: 5 }}
                     >
                       <ExternalLink size={16} />
@@ -139,7 +139,7 @@ const Projects = () => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-gray-600 hover:text-gray-800 font-medium transition-colors"
+                        className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 font-medium transition-colors"
                         whileHover={{ x: 5 }}
                       >
                         <Github size={16} />

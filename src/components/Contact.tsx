@@ -95,7 +95,7 @@ const Contact = () => {
       icon: FaGithub,
       href: "https://github.com/Jutehk",
       label: "GitHub",
-      color: "text-gray-800 hover:text-gray-900",
+      color: "text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white",
     },
     {
       icon: FaInstagram,
@@ -106,7 +106,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-white">
+    <section id="contact" className="section-padding bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
       <div className="container">
         <motion.div
           variants={containerVariants}
@@ -117,10 +117,10 @@ const Contact = () => {
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center space-y-4">
-            <h2 className="text-4xl font-bold text-gray-900">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
               Let's <span className="gradient-text">Connect</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Ready to start your next project or discuss internship opportunities? 
               I'd love to hear from you and explore how we can work together.
             </p>
@@ -131,8 +131,8 @@ const Contact = () => {
             {/* Contact Information */}
             <motion.div variants={itemVariants} className="space-y-8">
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-gray-900">Get in Touch</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Get in Touch</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   I'm currently seeking internship opportunities where I can apply my 
                   frontend development and software testing skills. Whether you have 
                   a project in mind or just want to connect, I'm always open to 
@@ -145,23 +145,23 @@ const Contact = () => {
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
-                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors"
+                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
                     whileHover={{ x: 5 }}
                   >
-                    <div className="p-3 bg-gradient-to-r from-primary-100 to-secondary-100 rounded-xl">
-                      <info.icon className="text-primary-600" size={20} />
+                    <div className="p-3 bg-gradient-to-r from-primary-100 to-secondary-100 dark:from-primary-900/30 dark:to-secondary-900/30 rounded-xl">
+                      <info.icon className="text-primary-600 dark:text-primary-400" size={20} />
                     </div>
                     <div>
-                      <p className="text-sm text-gray-500 font-medium">{info.label}</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">{info.label}</p>
                       {info.href ? (
                         <a
                           href={info.href}
-                          className="text-gray-900 hover:text-primary-600 transition-colors"
+                          className="text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-gray-900">{info.value}</p>
+                        <p className="text-gray-900 dark:text-white">{info.value}</p>
                       )}
                     </div>
                   </motion.div>
@@ -170,7 +170,7 @@ const Contact = () => {
 
               {/* Social Links */}
               <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-gray-900">Follow Me</h4>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Follow Me</h4>
                 <div className="flex gap-4">
                   {socialLinks.map((social, index) => (
                     <motion.a
@@ -178,7 +178,7 @@ const Contact = () => {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`p-3 bg-gray-100 rounded-xl ${social.color} transition-all duration-300 hover:shadow-lg`}
+                      className={`p-3 bg-gray-100 dark:bg-gray-700 rounded-xl ${social.color} transition-all duration-300 hover:shadow-lg`}
                       whileHover={{ scale: 1.1, y: -2 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -191,15 +191,15 @@ const Contact = () => {
 
             {/* Contact Form */}
             <motion.div variants={itemVariants}>
-              <div className="card p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Send a Message</h3>
+              <div className="card p-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Send a Message</h3>
                 
                 {/* Status Messages */}
                 {submitted && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="flex items-center gap-2 p-4 bg-green-50 text-green-700 rounded-lg mb-6"
+                    className="flex items-center gap-2 p-4 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 rounded-lg mb-6"
                   >
                     <CheckCircle size={20} />
                     <span>Thank you! Your message has been sent successfully.</span>
@@ -210,7 +210,7 @@ const Contact = () => {
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="flex items-center gap-2 p-4 bg-red-50 text-red-700 rounded-lg mb-6"
+                    className="flex items-center gap-2 p-4 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 rounded-lg mb-6"
                   >
                     <AlertCircle size={20} />
                     <span>Oops! Something went wrong. Please try again.</span>
@@ -220,7 +220,7 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         Your Name
                       </label>
                       <input
@@ -228,13 +228,13 @@ const Contact = () => {
                         id="name"
                         name="name"
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                         placeholder="John Doe"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         Email Address
                       </label>
                       <input
@@ -242,27 +242,27 @@ const Contact = () => {
                         id="email"
                         name="email"
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                         placeholder="john@example.com"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Subject
                     </label>
                     <input
                       type="text"
                       id="subject"
                       name="subject"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                       placeholder="Internship Opportunity"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Message
                     </label>
                     <textarea
@@ -270,7 +270,7 @@ const Contact = () => {
                       name="message"
                       rows={5}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 resize-none"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 resize-none bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                       placeholder="Tell me about your project or opportunity..."
                     />
                   </div>
