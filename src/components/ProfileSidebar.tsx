@@ -5,17 +5,17 @@ import profile from '../assets/profile.jpg';
 
 const ProfileSidebar = () => {
   const personalInfo = [
-    { icon: Mail, label: 'Email', value: 'julianandunge54@gmail.com' },
-    { icon: Phone, label: 'Phone', value: '+254718453328' },
-    { icon: MapPin, label: 'Location', value: 'Nairobi, Kenya' },
-    { icon: Calendar, label: 'Available', value: 'Immediately' },
-    { icon: GraduationCap, label: 'Graduation', value: 'Dec 2025' },
+    { id: 'email', icon: Mail, label: 'Email', value: 'julianandunge54@gmail.com' },
+    { id: 'phone', icon: Phone, label: 'Phone', value: '+254718453328' },
+    { id: 'location', icon: MapPin, label: 'Location', value: 'Nairobi, Kenya' },
+    { id: 'available', icon: Calendar, label: 'Available', value: 'Immediately' },
+    { id: 'graduation', icon: GraduationCap, label: 'Graduation', value: 'Dec 2025' },
   ];
 
   const socialLinks = [
-    { icon: FaLinkedin, href: "https://www.linkedin.com/in/juliana-ndunge/", color: "text-blue-600" },
-    { icon: FaGithub, href: "https://github.com/Jutehk", color: "text-gray-800 dark:text-gray-200" },
-    { icon: FaInstagram, href: "https://www.instagram.com/julie05kim/", color: "text-pink-600" },
+    { id: 'linkedin', icon: FaLinkedin, href: "https://www.linkedin.com/in/juliana-ndunge/", color: "text-blue-600" },
+    { id: 'github', icon: FaGithub, href: "https://github.com/Jutehk", color: "text-gray-800 dark:text-gray-200" },
+    { id: 'instagram', icon: FaInstagram, href: "https://www.instagram.com/julie05kim/", color: "text-pink-600" },
   ];
 
   return (
@@ -45,12 +45,12 @@ const ProfileSidebar = () => {
 
       {/* Personal Information */}
       <div className="space-y-3">
-        {personalInfo.map((info, index) => (
+        {personalInfo.map((info) => (
           <motion.div
-            key={index}
+            key={info.id}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.1 + 0.3 }}
+            transition={{ delay: 0.3 }}
             className="flex items-center gap-3 text-sm"
           >
             <div className="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg">
@@ -68,9 +68,9 @@ const ProfileSidebar = () => {
       <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
         <p className="text-sm font-medium text-gray-900 dark:text-white mb-3">Connect with me</p>
         <div className="flex gap-3">
-          {socialLinks.map((social, index) => (
+          {socialLinks.map((social) => (
             <motion.a
-              key={index}
+              key={social.id}
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"

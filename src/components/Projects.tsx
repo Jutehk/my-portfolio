@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import { ExternalLink, ArrowRight } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa';
 import { projects } from '../data/projects';
 
 const Projects = () => {
@@ -65,7 +66,7 @@ const Projects = () => {
             variants={containerVariants}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {projects.slice(0, 3).map((project, index) => (
+            {projects.slice(0, 3).map((project) => (
               <motion.div
                 key={project.title}
                 variants={cardVariants}
@@ -105,7 +106,7 @@ const Projects = () => {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                       >
-                        <Github size={20} />
+                        <FaGithub size={20} />
                       </motion.a>
                     )}
                   </div>
@@ -142,7 +143,7 @@ const Projects = () => {
                         className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 font-medium transition-colors"
                         whileHover={{ x: 5 }}
                       >
-                        <Github size={16} />
+                        <FaGithub size={16} />
                         Code
                       </motion.a>
                     )}

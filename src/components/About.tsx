@@ -1,3 +1,5 @@
+
+
 import { motion } from 'framer-motion';
 import { GraduationCap, Award, Target, Heart, Brain, Lightbulb, Users, Clock } from 'lucide-react';
 
@@ -27,6 +29,7 @@ const About = () => {
 
   const achievements = [
     {
+      id: "degree",
       icon: GraduationCap,
       title: "Mathematics & Computer Science",
       subtitle: "Kenyatta University • Dec 2025",
@@ -34,6 +37,7 @@ const About = () => {
       bgColor: "bg-primary-100 dark:bg-primary-900/30",
     },
     {
+      id: "certification",
       icon: Award,
       title: "Software Testing Certification",
       subtitle: "PLP Academy • Aug 2025",
@@ -41,6 +45,7 @@ const About = () => {
       bgColor: "bg-secondary-100 dark:bg-secondary-900/30",
     },
     {
+      id: "internship",
       icon: Target,
       title: "Seeking Internship",
       subtitle: "Frontend Dev & Testing",
@@ -50,12 +55,42 @@ const About = () => {
   ];
 
   const softSkills = [
-    { icon: Brain, title: "Analytical Thinking", description: "Breaking down complex problems into manageable solutions" },
-    { icon: Lightbulb, title: "Creative Problem Solving", description: "Finding innovative approaches to technical challenges" },
-    { icon: Users, title: "Team Collaboration", description: "Working effectively in diverse, cross-functional teams" },
-    { icon: Clock, title: "Time Management", description: "Balancing multiple projects and meeting tight deadlines" },
-    { icon: Heart, title: "Attention to Detail", description: "Ensuring quality and precision in every line of code" },
-    { icon: Target, title: "Goal-Oriented", description: "Focused on delivering results and continuous improvement" },
+    {
+      id: "thinking",
+      icon: Brain,
+      title: "Analytical Thinking",
+      description: "Breaking down complex problems into manageable solutions"
+    },
+    {
+      id: "creativity",
+      icon: Lightbulb,
+      title: "Creative Problem Solving",
+      description: "Finding innovative approaches to technical challenges"
+    },
+    {
+      id: "collaboration",
+      icon: Users,
+      title: "Team Collaboration",
+      description: "Working effectively in diverse, cross-functional teams"
+    },
+    {
+      id: "time",
+      icon: Clock,
+      title: "Time Management",
+      description: "Balancing multiple projects and meeting tight deadlines"
+    },
+    {
+      id: "detail",
+      icon: Heart,
+      title: "Attention to Detail",
+      description: "Ensuring quality and precision in every line of code"
+    },
+    {
+      id: "goals",
+      icon: Target,
+      title: "Goal-Oriented",
+      description: "Focused on delivering results and continuous improvement"
+    },
   ];
 
   return (
@@ -85,7 +120,6 @@ const About = () => {
             {/* Story Section */}
             <motion.div variants={itemVariants} className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">My Journey</h3>
-              
               <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
                 <p>
                   I'm a passionate technologist with a unique blend of mathematical precision and 
@@ -94,14 +128,12 @@ const About = () => {
                   with specialized expertise in{' '}
                   <span className="font-semibold text-secondary-600 dark:text-secondary-400">Software Testing</span>.
                 </p>
-                
                 <p>
                   I believe in creating digital experiences that are not only visually stunning 
                   but also robust and reliable. My dual expertise allows me to build applications 
                   from both perspectives - crafting beautiful user interfaces while ensuring 
                   they meet the highest quality standards through comprehensive testing.
                 </p>
-                
                 <p>
                   Currently seeking an internship opportunity where I can contribute my skills 
                   in frontend development and software testing while continuing to learn and 
@@ -113,11 +145,10 @@ const About = () => {
             {/* Achievements */}
             <motion.div variants={itemVariants} className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Education & Goals</h3>
-              
               <div className="space-y-4">
-                {achievements.map((achievement, index) => (
+                {achievements.map((achievement) => (
                   <motion.div
-                    key={index}
+                    key={achievement.id}
                     className="card p-6 hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
                     whileHover={{ scale: 1.02, y: -2 }}
                   >
@@ -144,11 +175,10 @@ const About = () => {
                 Beyond technical skills, these personal qualities drive my success
               </p>
             </div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {softSkills.map((skill, index) => (
+              {softSkills.map((skill) => (
                 <motion.div
-                  key={index}
+                  key={skill.id}
                   variants={itemVariants}
                   className="card p-6 text-center hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
                   whileHover={{ scale: 1.05, y: -5 }}

@@ -81,21 +81,22 @@ const Footer = () => {
               className="text-center md:text-right"
             >
               <h4 className="text-lg font-semibold mb-4">Connect With Me</h4>
-              <div className="flex justify-center md:justify-end gap-4">
-                {socialLinks.map((social, index) => (
-                  <motion.a
-                    key={index}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-gray-800 dark:bg-gray-900 rounded-full text-gray-400 hover:text-white hover:bg-gray-700 dark:hover:bg-gray-800 transition-all duration-300"
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <social.icon size={20} />
-                  </motion.a>
-                ))}
-              </div>
+             <div className="flex justify-center md:justify-end gap-4">
+  {socialLinks.map((social) => (
+    <motion.a
+      key={social.label}
+      href={social.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-3 bg-gray-800 dark:bg-gray-900 rounded-full text-gray-400 hover:text-white hover:bg-gray-700 dark:hover:bg-gray-800 transition-all duration-300"
+      whileHover={{ scale: 1.1, y: -2 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      <social.icon size={20} />
+    </motion.a>
+  ))}
+</div>
+
             </motion.div>
           </div>
 

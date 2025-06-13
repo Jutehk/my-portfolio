@@ -17,7 +17,6 @@ import {
   SiPostman,
   SiJira,
   SiTestinglibrary,
-  SiPlaywright,
   SiMocha
 } from "react-icons/si";
 import { Bug, TestTube, Shield, Zap, FileCheck, Search, AlertTriangle } from "lucide-react";
@@ -41,7 +40,6 @@ export const testingSkills = [
   { name: "Jest", icon: SiJest, color: "text-red-600" },
   { name: "React Testing Library", icon: SiTestinglibrary, color: "text-red-500" },
   { name: "Cypress", icon: SiCypress, color: "text-green-600" },
-  { name: "Playwright", icon: SiPlaywright, color: "text-green-500" },
   { name: "Selenium", icon: SiSelenium, color: "text-green-500" },
   { name: "Mocha", icon: SiMocha, color: "text-brown-600" },
   { name: "API Testing", icon: SiPostman, color: "text-orange-500" },
