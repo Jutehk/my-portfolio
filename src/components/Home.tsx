@@ -128,7 +128,7 @@ const Home = () => {
                 <div className="text-sm text-gray-600 dark:text-gray-400">Graduate</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold gradient-text">10+</div>
+                <div className="text-2xl md:text-3xl font-bold gradient-text">30+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Projects</div>
               </div>
               <div className="text-center">

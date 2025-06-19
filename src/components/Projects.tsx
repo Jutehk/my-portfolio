@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import { ExternalLink, ArrowRight } from 'lucide-react';
-import { FaGithub } from 'react-icons/fa';
-import { projects } from '../data/projects';
+import { motion } from "framer-motion";
+import { ExternalLink, ArrowRight } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
+import { projects } from "../data/projects";
 
 const Projects = () => {
   const containerVariants = {
@@ -40,7 +40,10 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="section-padding bg-white dark:bg-gray-900">
+    <section
+      id="projects"
+      className="section-padding bg-white dark:bg-gray-900"
+    >
       <div className="container">
         <motion.div
           variants={containerVariants}
@@ -55,8 +58,9 @@ const Projects = () => {
               Featured <span className="gradient-text">Projects</span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              A showcase of my frontend development skills through real-world projects 
-              that demonstrate modern web technologies and best practices.
+              A showcase of my frontend development and software testing skills
+              through real-world projects that demonstrate modern technologies
+              and best practices.
             </p>
             <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-full mx-auto" />
           </motion.div>
@@ -66,13 +70,13 @@ const Projects = () => {
             variants={containerVariants}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {projects.slice(0, 3).map((project) => (
+            {projects.slice(0, 6).map((project) => (
               <motion.div
                 key={project.title}
                 variants={cardVariants}
-                whileHover={{ 
+                whileHover={{
                   y: -10,
-                  transition: { duration: 0.3 }
+                  transition: { duration: 0.3 },
                 }}
                 className="card overflow-hidden group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
               >
@@ -84,7 +88,7 @@ const Projects = () => {
                     className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
+
                   {/* Overlay buttons */}
                   <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
                     <motion.a
@@ -117,7 +121,7 @@ const Projects = () => {
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                     {project.title}
                   </h3>
-                  
+
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                     {project.description}
                   </p>
@@ -134,7 +138,7 @@ const Projects = () => {
                       <ExternalLink size={16} />
                       Live Demo
                     </motion.a>
-                    
+
                     {project.link && (
                       <motion.a
                         href={project.link}
@@ -164,7 +168,10 @@ const Projects = () => {
               whileTap={{ scale: 0.95 }}
             >
               View All Projects
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight
+                size={16}
+                className="group-hover:translate-x-1 transition-transform"
+              />
             </motion.a>
           </motion.div>
         </motion.div>

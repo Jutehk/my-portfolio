@@ -1,21 +1,56 @@
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Calendar, GraduationCap } from 'lucide-react';
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
-import profile from '../assets/profile.jpg';
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin, Calendar, GraduationCap } from "lucide-react";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import profile from "../assets/profile.jpg";
 
 const ProfileSidebar = () => {
   const personalInfo = [
-    { id: 'email', icon: Mail, label: 'Email', value: 'julianandunge54@gmail.com' },
-    { id: 'phone', icon: Phone, label: 'Phone', value: '+254718453328' },
-    { id: 'location', icon: MapPin, label: 'Location', value: 'Nairobi, Kenya' },
-    { id: 'available', icon: Calendar, label: 'Available', value: 'Immediately' },
-    { id: 'graduation', icon: GraduationCap, label: 'Graduation', value: 'Dec 2025' },
+    {
+      id: "email",
+      icon: Mail,
+      label: "Email",
+      value: "julianandunge54@gmail.com",
+    },
+    { id: "phone", icon: Phone, label: "Phone", value: "+254718453328" },
+    {
+      id: "location",
+      icon: MapPin,
+      label: "Location",
+      value: "Nairobi, Kenya",
+    },
+    {
+      id: "available",
+      icon: Calendar,
+      label: "Available",
+      value: "Immediately",
+    },
+    {
+      id: "graduation",
+      icon: GraduationCap,
+      label: "Graduation",
+      value: "Dec 2025",
+    },
   ];
 
   const socialLinks = [
-    { id: 'linkedin', icon: FaLinkedin, href: "https://www.linkedin.com/in/juliana-ndunge/", color: "text-blue-600" },
-    { id: 'github', icon: FaGithub, href: "https://github.com/Jutehk", color: "text-gray-800 dark:text-gray-200" },
-    { id: 'instagram', icon: FaInstagram, href: "https://www.instagram.com/julie05kim/", color: "text-pink-600" },
+    {
+      id: "linkedin",
+      icon: FaLinkedin,
+      href: "https://www.linkedin.com/in/juliana-ndunge/",
+      color: "text-blue-600",
+    },
+    {
+      id: "github",
+      icon: FaGithub,
+      href: "https://github.com/Jutehk",
+      color: "text-gray-800 dark:text-gray-200",
+    },
+    {
+      id: "instagram",
+      icon: FaInstagram,
+      href: "https://www.instagram.com/julie05kim/",
+      color: "text-pink-600",
+    },
   ];
 
   return (
@@ -39,8 +74,12 @@ const ProfileSidebar = () => {
           />
           <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-2 border-white dark:border-gray-800"></div>
         </motion.div>
-        <h3 className="mt-4 text-xl font-bold text-gray-900 dark:text-white">Juliana Ndunge</h3>
-        <p className="text-primary-600 dark:text-primary-400 font-medium">Frontend Developer & Software Tester</p>
+        <h3 className="mt-4 text-xl font-bold text-gray-900 dark:text-white">
+          Juliana Ndunge
+        </h3>
+        <p className="text-primary-600 dark:text-primary-400 font-medium">
+          Frontend Developer & Software Tester
+        </p>
       </div>
 
       {/* Personal Information */}
@@ -54,11 +93,18 @@ const ProfileSidebar = () => {
             className="flex items-center gap-3 text-sm"
           >
             <div className="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg">
-              <info.icon size={16} className="text-primary-600 dark:text-primary-400" />
+              <info.icon
+                size={16}
+                className="text-primary-600 dark:text-primary-400"
+              />
             </div>
             <div>
-              <p className="text-gray-500 dark:text-gray-400 text-xs">{info.label}</p>
-              <p className="text-gray-900 dark:text-white font-medium">{info.value}</p>
+              <p className="text-gray-500 dark:text-gray-400 text-xs">
+                {info.label}
+              </p>
+              <p className="text-gray-900 dark:text-white font-medium">
+                {info.value}
+              </p>
             </div>
           </motion.div>
         ))}
@@ -66,7 +112,9 @@ const ProfileSidebar = () => {
 
       {/* Social Links */}
       <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
-        <p className="text-sm font-medium text-gray-900 dark:text-white mb-3">Connect with me</p>
+        <p className="text-sm font-medium text-gray-900 dark:text-white mb-3">
+          Connect with me
+        </p>
         <div className="flex gap-3">
           {socialLinks.map((social) => (
             <motion.a
@@ -86,7 +134,7 @@ const ProfileSidebar = () => {
 
       {/* Download CV Button */}
       <motion.a
-        href="/resume.pdf"
+        href="/Juliana1.pdf"
         download
         className="w-full btn-primary text-center text-sm py-2"
         whileHover={{ scale: 1.02 }}

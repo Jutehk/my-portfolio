@@ -1,9 +1,18 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-
 const Contact = () => {
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  useEffect(() => {
+    if (status !== 'idle') {
+      const timer = setTimeout(() => setStatus('idle'), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -28,14 +37,37 @@ const Contact = () => {
   };
 
   const contactDetails = [
-    { id: 'email', icon: Mail, value: 'juliana@example.com' },
-    { id: 'phone', icon: Phone, value: '+254712345678' },
+    { id: 'email', icon: Mail, value: 'julianandunge54@gmail.com' },
+    { id: 'phone', icon: Phone, value: '+254718453328' },
   ];
 
   const socialLinks = [
-  { id: 'github', label: 'GitHub', url: 'https://github.com/juliana', icon: FaGithub },
-  { id: 'linkedin', label: 'LinkedIn', url: 'https://linkedin.com/in/juliana', icon: FaLinkedin },
-];
+    { id: 'github', label: 'GitHub', url: 'https://github.com/Jutehk', icon: FaGithub },
+    { id: 'linkedin', label: 'LinkedIn', url: 'https://www.linkedin.com/in/juliana-ndunge/', icon: FaLinkedin },
+  ];
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('idle');
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    const response = await fetch('https://formspree.io/f/xeokzwkq', {
+      method: 'POST',
+      body: data,
+      headers: {
+        Accept: 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      setStatus('success');
+      form.reset();
+    } else {
+      setStatus('error');
+    }
+  };
 
   return (
     <section id="contact" className="section-padding bg-white dark:bg-gray-900">
@@ -88,7 +120,8 @@ const Contact = () => {
 
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Send a Message</h3>
-              <form className="space-y-4">
+
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <input
                   type="text"
                   name="name"
@@ -110,6 +143,14 @@ const Contact = () => {
                   className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   required
                 />
+
+                {status === 'success' && (
+                  <p className="text-green-600 dark:text-green-400">Message sent successfully!</p>
+                )}
+                {status === 'error' && (
+                  <p className="text-red-600 dark:text-red-400">Oops! Something went wrong.</p>
+                )}
+
                 <motion.button
                   type="submit"
                   className="btn-primary"
