@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink, ArrowRight, TestTube, FileText, Bug } from "lucide-react";
+import { ExternalLink, ArrowRight, TestTube , Bug } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 
 const Projects = () => {
@@ -118,7 +118,7 @@ const Projects = () => {
             variants={containerVariants}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {qaProjects.map((project, index) => (
+            {qaProjects.map((project) => (
               <motion.div
                 key={project.title}
                 variants={cardVariants}
