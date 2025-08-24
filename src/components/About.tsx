@@ -129,7 +129,7 @@ const About = () => {
                   This passion led me to pursue specialized training at{' '}
                   <span className="font-semibold text-teal-600">PLP Academy</span>, where I'm 
                   mastering both manual and automated testing methodologies. I believe that 
-                  quality isn't just about finding bugs—it's about ensuring exceptional user 
+                  quality isn't just about finding bugs—it\'s about ensuring exceptional user 
                   experiences and building trust in software products.
                 </p>
                 <p>
