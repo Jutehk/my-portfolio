@@ -38,7 +38,7 @@ const About = () => {
       id: "certification",
       icon: Award,
       title: "Software Testing Certification",
-      subtitle: "PLP Academy • Aug 2025",
+      subtitle: "PLP Academy • Dec 2025",
       color: "text-teal-600",
       bgColor: "bg-teal-50",
     },
@@ -46,7 +46,7 @@ const About = () => {
       id: "goal",
       icon: Target,
       title: "QA Engineering Career",
-      subtitle: "Seeking Full-time Position",
+      subtitle: "Seeking Full-Time QA Engineer Role",
       color: "text-green-600",
       bgColor: "bg-green-50",
     },
@@ -129,7 +129,7 @@ const About = () => {
                   This passion led me to pursue specialized training at{' '}
                   <span className="font-semibold text-teal-600">PLP Academy</span>, where I'm 
                   mastering both manual and automated testing methodologies. I believe that 
-                  quality isn't just about finding bugs—it\'s about ensuring exceptional user 
+                  quality isn't just about finding bugs—it's about ensuring exceptional user 
                   experiences and building trust in software products.
                 </p>
                 <p>

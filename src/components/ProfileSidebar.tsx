@@ -127,7 +127,7 @@ const ProfileSidebar = () => {
 
       {/* Download CV Button */}
       <motion.a
-        href="/Juliana1.pdf"
+        href="/Juliana_Ndunge_QA_CV.pdf"
         download
         className="w-full btn-primary text-center text-sm py-2"
         whileHover={{ scale: 1.02 }}

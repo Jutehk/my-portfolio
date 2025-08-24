@@ -59,16 +59,16 @@ const Projects = () => {
       icon: Bug,
       technologies: ["Postman", "JavaScript", "REST API"]
     },
-    {
-      title: "Test Documentation Portal",
-      description: "Created comprehensive test documentation including test plans, test cases, and bug reports for multiple web applications.",
-      image: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-      demo: "https://notetakingap.netlify.app/",
-      link: "https://github.com/Jutehk/Note-Taking-App.git",
-      type: "Test Documentation",
-      icon: FileText,
-      technologies: ["Test Plans", "Bug Reports", "JIRA"]
-    },
+   {
+    title: "CleanCity QA Project",
+    description: "Led QA efforts as Test Lead for a waste management web application. Coordinated manual and automation testing, managed defect tracking, and delivered comprehensive test reports ensuring high product quality.",
+    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", 
+    demo: "https://jutehk.github.io/CleanCity/",
+    link: "https://github.com/Jutehk/CleanCity.git",
+    type: "Comprehensive QA",
+    icon: TestTube,
+    technologies: ["Jest", "Selenium", "Lighthouse", "JIRA"]
+  },
     {
       title: "Mobile App Testing",
       description: "Manual and automated testing of mobile applications focusing on usability, performance, and cross-device compatibility.",
@@ -89,16 +89,6 @@ const Projects = () => {
       icon: Bug,
       technologies: ["Load Testing", "Performance Monitoring", "Analytics"]
     },
-    {
-      title: "QA Process Improvement",
-      description: "Implemented QA processes and methodologies that improved testing efficiency by 40% and reduced bug escape rate significantly.",
-      image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-      demo: "#",
-      link: "#",
-      type: "Process Improvement",
-      icon: FileText,
-      technologies: ["Process Design", "Quality Metrics", "Team Training"]
-    }
   ];
 
   return (

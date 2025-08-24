@@ -84,9 +84,9 @@ const Home = () => {
                 A passionate Quality Assurance Engineer with expertise in{' '}
                 <span className="font-semibold text-blue-600">Manual Testing</span> and{' '}
                 <span className="font-semibold text-teal-600">Test Automation</span>.
-                Currently completing my Mathematics and Computer Science degree at{' '}
-                <span className="font-semibold text-gray-800">Kenyatta University</span> and
-                Software Testing certification at{' '}
+                Completed a Mathematics and Computer Science degree at {' '}
+                <span className="font-semibold text-gray-800">Kenyatta University (awaiting official graduation in December 2025)</span> 
+               alongside a Software Testing certification from {' '}
                 <span className="font-semibold text-gray-800">PLP Academy</span>.
               </p>
               

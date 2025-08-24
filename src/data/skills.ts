@@ -5,7 +5,9 @@ import {
   FaReact, 
   FaGithub, 
   FaFigma,
-  FaNodeJs 
+  FaPython,
+  FaGitAlt
+  
 } from "react-icons/fa";
 import { 
   SiTypescript, 
@@ -17,7 +19,9 @@ import {
   SiPostman,
   SiJira,
   SiTestinglibrary,
-  SiMocha
+  SiMocha,
+  SiTrello,
+  SiLighthouse
 } from "react-icons/si";
 import { Bug, TestTube, Shield, Zap, FileCheck, Search, AlertTriangle, CheckCircle } from "lucide-react";
 
@@ -45,13 +49,16 @@ export const programmingSkills = [
   { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
   { name: "React", icon: FaReact, color: "text-cyan-500" },
   { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-teal-500" },
-  { name: "Node.js", icon: FaNodeJs, color: "text-green-600" },
+  { name: "Python", icon: FaPython, color: "text-yellow-500" },
 ];
 
 export const toolsSkills = [
   { name: "JIRA", icon: SiJira, color: "text-blue-600" },
   { name: "GitHub", icon: FaGithub, color: "text-gray-800" },
+  { name: "Git", icon: FaGitAlt, color: "text-red-600" },
   { name: "Postman", icon: SiPostman, color: "text-orange-500" },
   { name: "Figma", icon: FaFigma, color: "text-pink-500" },
   { name: "Vite", icon: SiVite, color: "text-purple-500" },
+  { name: "Trello", icon: SiTrello, color: "text-blue-500" },
+  { name: "Lighthouse", icon: SiLighthouse, color: "text-red-500" },
 ];
