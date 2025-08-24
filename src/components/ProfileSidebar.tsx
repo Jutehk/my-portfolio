@@ -43,7 +43,7 @@ const ProfileSidebar = () => {
       id: "github",
       icon: FaGithub,
       href: "https://github.com/Jutehk",
-      color: "text-gray-800 dark:text-gray-200",
+      color: "text-gray-800",
     },
     {
       id: "instagram",
@@ -58,7 +58,7 @@ const ProfileSidebar = () => {
       initial={{ x: -100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 space-y-6 border border-gray-200 dark:border-gray-700"
+      className="bg-white rounded-2xl shadow-xl p-6 space-y-6 border border-gray-200"
     >
       {/* Profile Image */}
       <div className="text-center">
@@ -70,15 +70,15 @@ const ProfileSidebar = () => {
           <img
             src={profile}
             alt="Juliana Ndunge"
-            className="w-32 h-32 rounded-full object-cover border-4 border-primary-500 shadow-lg"
+            className="w-32 h-32 rounded-full object-cover border-4 border-blue-500 shadow-lg"
           />
-          <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-2 border-white dark:border-gray-800"></div>
+          <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-2 border-white"></div>
         </motion.div>
-        <h3 className="mt-4 text-xl font-bold text-gray-900 dark:text-white">
+        <h3 className="mt-4 text-xl font-bold text-gray-900">
           Juliana Ndunge
         </h3>
-        <p className="text-primary-600 dark:text-primary-400 font-medium">
-          Frontend Developer & Software Tester
+        <p className="text-blue-600 font-medium">
+          QA Engineer & Software Tester
         </p>
       </div>
 
@@ -92,27 +92,20 @@ const ProfileSidebar = () => {
             transition={{ delay: 0.3 }}
             className="flex items-center gap-3 text-sm"
           >
-            <div className="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg">
-              <info.icon
-                size={16}
-                className="text-primary-600 dark:text-primary-400"
-              />
+            <div className="p-2 bg-gray-100 rounded-lg">
+              <info.icon size={16} className="text-blue-600" />
             </div>
             <div>
-              <p className="text-gray-500 dark:text-gray-400 text-xs">
-                {info.label}
-              </p>
-              <p className="text-gray-900 dark:text-white font-medium">
-                {info.value}
-              </p>
+              <p className="text-gray-500 text-xs">{info.label}</p>
+              <p className="text-gray-900 font-medium">{info.value}</p>
             </div>
           </motion.div>
         ))}
       </div>
 
       {/* Social Links */}
-      <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
-        <p className="text-sm font-medium text-gray-900 dark:text-white mb-3">
+      <div className="pt-4 border-t border-gray-200">
+        <p className="text-sm font-medium text-gray-900 mb-3">
           Connect with me
         </p>
         <div className="flex gap-3">
@@ -122,7 +115,7 @@ const ProfileSidebar = () => {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`p-2 bg-gray-100 dark:bg-gray-700 rounded-lg ${social.color} hover:scale-110 transition-all duration-200`}
+              className={`p-2 bg-gray-100 rounded-lg ${social.color} hover:scale-110 transition-all duration-200`}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.95 }}
             >

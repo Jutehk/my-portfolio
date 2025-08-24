@@ -1,7 +1,5 @@
-
-
 import { motion } from 'framer-motion';
-import { GraduationCap, Award, Target, Heart, Brain, Lightbulb, Users, Clock } from 'lucide-react';
+import { GraduationCap, Award, Target, TestTube, Shield, CheckCircle, Users, Clock } from 'lucide-react';
 
 const About = () => {
   const containerVariants = {
@@ -33,68 +31,68 @@ const About = () => {
       icon: GraduationCap,
       title: "Mathematics & Computer Science",
       subtitle: "Kenyatta University • Dec 2025",
-      color: "text-primary-600 dark:text-primary-400",
-      bgColor: "bg-primary-100 dark:bg-primary-900/30",
+      color: "text-blue-600",
+      bgColor: "bg-blue-50",
     },
     {
       id: "certification",
       icon: Award,
       title: "Software Testing Certification",
       subtitle: "PLP Academy • Aug 2025",
-      color: "text-secondary-600 dark:text-secondary-400",
-      bgColor: "bg-secondary-100 dark:bg-secondary-900/30",
+      color: "text-teal-600",
+      bgColor: "bg-teal-50",
     },
     {
-      id: "internship",
+      id: "goal",
       icon: Target,
-      title: "Seeking Internship",
-      subtitle: "Frontend Dev & Testing",
-      color: "text-accent-600 dark:text-accent-400",
-      bgColor: "bg-accent-100 dark:bg-accent-900/30",
+      title: "QA Engineering Career",
+      subtitle: "Seeking Full-time Position",
+      color: "text-green-600",
+      bgColor: "bg-green-50",
     },
   ];
 
-  const softSkills = [
+  const qaStrengths = [
     {
-      id: "thinking",
-      icon: Brain,
-      title: "Analytical Thinking",
-      description: "Breaking down complex problems into manageable solutions"
+      id: "manual",
+      icon: TestTube,
+      title: "Manual Testing Expertise",
+      description: "Comprehensive test case design and execution across web and mobile applications"
     },
     {
-      id: "creativity",
-      icon: Lightbulb,
-      title: "Creative Problem Solving",
-      description: "Finding innovative approaches to technical challenges"
+      id: "automation",
+      icon: Shield,
+      title: "Test Automation",
+      description: "Building robust automated test suites using modern frameworks and tools"
+    },
+    {
+      id: "quality",
+      icon: CheckCircle,
+      title: "Quality Assurance",
+      description: "Implementing QA processes that ensure software reliability and user satisfaction"
     },
     {
       id: "collaboration",
       icon: Users,
-      title: "Team Collaboration",
-      description: "Working effectively in diverse, cross-functional teams"
+      title: "Cross-functional Collaboration",
+      description: "Working effectively with development teams to integrate quality throughout SDLC"
     },
     {
-      id: "time",
+      id: "documentation",
       icon: Clock,
-      title: "Time Management",
-      description: "Balancing multiple projects and meeting tight deadlines"
+      title: "Test Documentation",
+      description: "Creating detailed test plans, cases, and reports for comprehensive coverage"
     },
     {
-      id: "detail",
-      icon: Heart,
-      title: "Attention to Detail",
-      description: "Ensuring quality and precision in every line of code"
-    },
-    {
-      id: "goals",
+      id: "continuous",
       icon: Target,
-      title: "Goal-Oriented",
-      description: "Focused on delivering results and continuous improvement"
+      title: "Continuous Improvement",
+      description: "Always seeking ways to enhance testing processes and methodologies"
     },
   ];
 
   return (
-    <section id="about" className="section-padding bg-white dark:bg-gray-900">
+    <section id="about" className="section-padding bg-gray-50">
       <div className="container">
         <motion.div
           variants={containerVariants}
@@ -105,51 +103,57 @@ const About = () => {
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center space-y-4">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-              About <span className="gradient-text">Me</span>
+            <h2 className="text-4xl font-bold text-gray-900">
+              About <span className="text-blue-600">Me</span>
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              A passionate technologist with a unique blend of mathematical precision and 
-              creative problem-solving, ready to make an impact in the tech industry.
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              A dedicated QA professional passionate about ensuring software excellence through 
+              meticulous testing and quality assurance practices.
             </p>
-            <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-full mx-auto" />
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-teal-600 rounded-full mx-auto" />
           </motion.div>
 
           {/* Main Content */}
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Story Section */}
             <motion.div variants={itemVariants} className="space-y-6">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">My Journey</h3>
-              <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
+              <h3 className="text-2xl font-bold text-gray-900">My QA Journey</h3>
+              <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  I'm a passionate technologist with a unique blend of mathematical precision and 
-                  creative problem-solving. My journey combines the analytical rigor of{' '}
-                  <span className="font-semibold text-primary-600 dark:text-primary-400">Mathematics and Computer Science</span>{' '}
-                  with specialized expertise in{' '}
-                  <span className="font-semibold text-secondary-600 dark:text-secondary-400">Software Testing</span>.
+                  My passion for software testing began during my studies in{' '}
+                  <span className="font-semibold text-blue-600">Mathematics and Computer Science</span>{' '}
+                  at Kenyatta University, where I discovered the critical importance of quality 
+                  assurance in software development.
                 </p>
                 <p>
-                  I believe in creating digital experiences that are not only visually stunning 
-                  but also robust and reliable. My dual expertise allows me to build applications 
-                  from both perspectives - crafting beautiful user interfaces while ensuring 
-                  they meet the highest quality standards through comprehensive testing.
+                  This passion led me to pursue specialized training at{' '}
+                  <span className="font-semibold text-teal-600">PLP Academy</span>, where I'm 
+                  mastering both manual and automated testing methodologies. I believe that 
+                  quality isn't just about finding bugs—it's about ensuring exceptional user 
+                  experiences and building trust in software products.
                 </p>
                 <p>
-                  Currently seeking an internship opportunity where I can contribute my skills 
-                  in frontend development and software testing while continuing to learn and 
-                  grow in a dynamic, real-world environment.
+                  My analytical background in mathematics provides me with a unique perspective 
+                  on test design and problem-solving. I approach each testing challenge with 
+                  systematic thinking, attention to detail, and a commitment to delivering 
+                  software that users can rely on.
+                </p>
+                <p>
+                  I'm actively seeking opportunities to contribute my QA expertise to a dynamic 
+                  team where I can help build high-quality software products while continuing 
+                  to grow in the field of quality assurance.
                 </p>
               </div>
             </motion.div>
 
             {/* Achievements */}
             <motion.div variants={itemVariants} className="space-y-6">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Education & Goals</h3>
+              <h3 className="text-2xl font-bold text-gray-900">Education & Goals</h3>
               <div className="space-y-4">
                 {achievements.map((achievement) => (
                   <motion.div
                     key={achievement.id}
-                    className="card p-6 hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
+                    className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
                     whileHover={{ scale: 1.02, y: -2 }}
                   >
                     <div className="flex items-center gap-4">
@@ -157,8 +161,8 @@ const About = () => {
                         <achievement.icon size={24} className={achievement.color} />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white">{achievement.title}</h4>
-                        <p className="text-gray-600 dark:text-gray-400 text-sm">{achievement.subtitle}</p>
+                        <h4 className="font-semibold text-gray-900">{achievement.title}</h4>
+                        <p className="text-gray-600 text-sm">{achievement.subtitle}</p>
                       </div>
                     </div>
                   </motion.div>
@@ -167,27 +171,29 @@ const About = () => {
             </motion.div>
           </div>
 
-          {/* Soft Skills Section */}
+          {/* QA Strengths Section */}
           <motion.div variants={itemVariants} className="space-y-8">
             <div className="text-center">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Core Strengths</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Beyond technical skills, these personal qualities drive my success
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">QA Expertise & Strengths</h3>
+              <p className="text-gray-600">
+                Core competencies that drive my success in quality assurance
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {softSkills.map((skill) => (
+              {qaStrengths.map((strength) => (
                 <motion.div
-                  key={skill.id}
+                  key={strength.id}
                   variants={itemVariants}
-                  className="card p-6 text-center hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
+                  className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
                   whileHover={{ scale: 1.05, y: -5 }}
                 >
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-primary-100 to-secondary-100 dark:from-primary-900/30 dark:to-secondary-900/30 rounded-xl mb-4">
-                    <skill.icon size={24} className="text-primary-600 dark:text-primary-400" />
+                  <div className="text-center space-y-4">
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-50 rounded-xl mb-4">
+                      <strength.icon size={24} className="text-blue-600" />
+                    </div>
+                    <h4 className="font-semibold text-gray-900">{strength.title}</h4>
+                    <p className="text-sm text-gray-600">{strength.description}</p>
                   </div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">{skill.title}</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">{skill.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -196,10 +202,10 @@ const About = () => {
           {/* Call to Action */}
           <motion.div
             variants={itemVariants}
-            className="text-center bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-900/20 dark:to-secondary-900/20 rounded-2xl p-8 border border-primary-200 dark:border-primary-800"
+            className="text-center bg-blue-50 rounded-2xl p-8 border border-blue-100"
           >
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-              Ready to bring passion and expertise to your team?
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              Ready to ensure your software quality?
             </h3>
             <motion.a
               href="#contact"

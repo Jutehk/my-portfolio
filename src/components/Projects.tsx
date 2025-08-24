@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import { ExternalLink, ArrowRight } from "lucide-react";
+import { ExternalLink, ArrowRight, TestTube, FileText, Bug } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
-import { projects } from "../data/projects";
 
 const Projects = () => {
   const containerVariants = {
@@ -39,11 +38,71 @@ const Projects = () => {
     },
   };
 
+  const qaProjects = [
+    {
+      title: "E-commerce Testing Suite",
+      description: "Comprehensive testing project for an e-commerce platform including functional, usability, and performance testing with automated test cases.",
+      image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      demo: "https://ecommercefilterapp.netlify.app/",
+      link: "https://github.com/Jutehk/ecommerce--App.git",
+      type: "Automation Testing",
+      icon: TestTube,
+      technologies: ["Jest", "Cypress", "React Testing Library"]
+    },
+    {
+      title: "API Testing Framework",
+      description: "Built a comprehensive API testing framework with automated test suites for REST endpoints, data validation, and performance monitoring.",
+      image: "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      demo: "https://climet.netlify.app/",
+      link: "https://github.com/Jutehk/weather-a.git",
+      type: "API Testing",
+      icon: Bug,
+      technologies: ["Postman", "JavaScript", "REST API"]
+    },
+    {
+      title: "Test Documentation Portal",
+      description: "Created comprehensive test documentation including test plans, test cases, and bug reports for multiple web applications.",
+      image: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      demo: "https://notetakingap.netlify.app/",
+      link: "https://github.com/Jutehk/Note-Taking-App.git",
+      type: "Test Documentation",
+      icon: FileText,
+      technologies: ["Test Plans", "Bug Reports", "JIRA"]
+    },
+    {
+      title: "Mobile App Testing",
+      description: "Manual and automated testing of mobile applications focusing on usability, performance, and cross-device compatibility.",
+      image: "https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      demo: "https://dashvisualize.netlify.app/",
+      link: "https://github.com/Jutehk/dashboard-with-data-visualization.git",
+      type: "Mobile Testing",
+      icon: TestTube,
+      technologies: ["Selenium", "Cross-browser Testing", "Responsive Design"]
+    },
+    {
+      title: "Performance Testing Suite",
+      description: "Developed performance testing strategies and executed load testing for web applications to ensure optimal user experience.",
+      image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      demo: "https://buynes.netlify.app/",
+      link: "https://github.com/Jutehk/project.git",
+      type: "Performance Testing",
+      icon: Bug,
+      technologies: ["Load Testing", "Performance Monitoring", "Analytics"]
+    },
+    {
+      title: "QA Process Improvement",
+      description: "Implemented QA processes and methodologies that improved testing efficiency by 40% and reduced bug escape rate significantly.",
+      image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      demo: "#",
+      link: "#",
+      type: "Process Improvement",
+      icon: FileText,
+      technologies: ["Process Design", "Quality Metrics", "Team Training"]
+    }
+  ];
+
   return (
-    <section
-      id="projects"
-      className="section-padding bg-white dark:bg-gray-900"
-    >
+    <section id="projects" className="section-padding bg-gray-50">
       <div className="container">
         <motion.div
           variants={containerVariants}
@@ -54,15 +113,14 @@ const Projects = () => {
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center space-y-4">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-              Featured <span className="gradient-text">Projects</span>
+            <h2 className="text-4xl font-bold text-gray-900">
+              QA <span className="text-blue-600">Projects</span>
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              A showcase of my frontend development and software testing skills
-              through real-world projects that demonstrate modern technologies
-              and best practices.
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              A showcase of my quality assurance projects demonstrating expertise in 
+              manual testing, test automation, and comprehensive QA processes.
             </p>
-            <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-full mx-auto" />
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-teal-600 rounded-full mx-auto" />
           </motion.div>
 
           {/* Projects Grid */}
@@ -70,7 +128,7 @@ const Projects = () => {
             variants={containerVariants}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {projects.slice(0, 6).map((project) => (
+            {qaProjects.map((project, index) => (
               <motion.div
                 key={project.title}
                 variants={cardVariants}
@@ -78,7 +136,7 @@ const Projects = () => {
                   y: -10,
                   transition: { duration: 0.3 },
                 }}
-                className="card overflow-hidden group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
+                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group"
               >
                 {/* Project Image */}
                 <div className="relative overflow-hidden">
@@ -89,24 +147,34 @@ const Projects = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
+                  {/* Project Type Badge */}
+                  <div className="absolute top-4 left-4">
+                    <div className="flex items-center gap-2 px-3 py-1 bg-white/90 rounded-full text-xs font-medium text-gray-700">
+                      <project.icon size={14} className="text-blue-600" />
+                      {project.type}
+                    </div>
+                  </div>
+
                   {/* Overlay buttons */}
                   <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <motion.a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 bg-white/90 dark:bg-gray-800/90 rounded-full text-gray-800 dark:text-gray-200 hover:bg-white dark:hover:bg-gray-700 transition-colors"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <ExternalLink size={20} />
-                    </motion.a>
-                    {project.link && (
+                    {project.demo !== "#" && (
+                      <motion.a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 bg-white/90 rounded-full text-gray-800 hover:bg-white transition-colors"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                      >
+                        <ExternalLink size={20} />
+                      </motion.a>
+                    )}
+                    {project.link !== "#" && (
                       <motion.a
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-3 bg-white/90 dark:bg-gray-800/90 rounded-full text-gray-800 dark:text-gray-200 hover:bg-white dark:hover:bg-gray-700 transition-colors"
+                        className="p-3 bg-white/90 rounded-full text-gray-800 hover:bg-white transition-colors"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                       >
@@ -118,33 +186,47 @@ const Projects = () => {
 
                 {/* Project Content */}
                 <div className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                     {project.title}
                   </h3>
 
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed">
                     {project.description}
                   </p>
 
-                  {/* Project Links */}
-                  <div className="flex items-center gap-4 pt-4 border-t border-gray-100 dark:border-gray-700">
-                    <motion.a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium transition-colors"
-                      whileHover={{ x: 5 }}
-                    >
-                      <ExternalLink size={16} />
-                      Live Demo
-                    </motion.a>
+                  {/* Technologies */}
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-2 py-1 bg-blue-50 text-blue-700 text-xs rounded-full font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
 
-                    {project.link && (
+                  {/* Project Links */}
+                  <div className="flex items-center gap-4 pt-4 border-t border-gray-100">
+                    {project.demo !== "#" && (
+                      <motion.a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors text-sm"
+                        whileHover={{ x: 5 }}
+                      >
+                        <ExternalLink size={16} />
+                        View Project
+                      </motion.a>
+                    )}
+
+                    {project.link !== "#" && (
                       <motion.a
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 font-medium transition-colors"
+                        className="flex items-center gap-2 text-gray-600 hover:text-gray-800 font-medium transition-colors text-sm"
                         whileHover={{ x: 5 }}
                       >
                         <FaGithub size={16} />

@@ -19,20 +19,7 @@ import {
   SiTestinglibrary,
   SiMocha
 } from "react-icons/si";
-import { Bug, TestTube, Shield, Zap, FileCheck, Search, AlertTriangle } from "lucide-react";
-
-export const frontendSkills = [
-  { name: "HTML5", icon: FaHtml5, color: "text-orange-500" },
-  { name: "CSS3", icon: FaCss3Alt, color: "text-blue-500" },
-  { name: "JavaScript", icon: FaJs, color: "text-yellow-500" },
-  { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
-  { name: "React", icon: FaReact, color: "text-cyan-500" },
-  { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-teal-500" },
-  { name: "Vite", icon: SiVite, color: "text-purple-500" },
-  { name: "Node.js", icon: FaNodeJs, color: "text-green-600" },
-  { name: "GitHub", icon: FaGithub, color: "text-gray-800 dark:text-gray-200" },
-  { name: "Figma", icon: FaFigma, color: "text-pink-500" },
-];
+import { Bug, TestTube, Shield, Zap, FileCheck, Search, AlertTriangle, CheckCircle } from "lucide-react";
 
 export const testingSkills = [
   { name: "Manual Testing", icon: TestTube, color: "text-blue-600" },
@@ -48,20 +35,23 @@ export const testingSkills = [
   { name: "Test Planning", icon: FileCheck, color: "text-purple-600" },
   { name: "Regression Testing", icon: Search, color: "text-indigo-600" },
   { name: "Performance Testing", icon: AlertTriangle, color: "text-yellow-600" },
-  { name: "JIRA", icon: SiJira, color: "text-blue-600" },
+  { name: "User Acceptance Testing", icon: CheckCircle, color: "text-green-600" },
 ];
 
-export const softSkills = [
-  "Analytical Thinking",
-  "Problem Solving", 
-  "Attention to Detail",
-  "Communication",
-  "Team Collaboration",
-  "Continuous Learning",
-  "Time Management",
-  "Critical Thinking",
-  "Adaptability",
-  "Documentation",
-  "Leadership",
-  "Creativity"
+export const programmingSkills = [
+  { name: "HTML5", icon: FaHtml5, color: "text-orange-500" },
+  { name: "CSS3", icon: FaCss3Alt, color: "text-blue-500" },
+  { name: "JavaScript", icon: FaJs, color: "text-yellow-500" },
+  { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
+  { name: "React", icon: FaReact, color: "text-cyan-500" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-teal-500" },
+  { name: "Node.js", icon: FaNodeJs, color: "text-green-600" },
+];
+
+export const toolsSkills = [
+  { name: "JIRA", icon: SiJira, color: "text-blue-600" },
+  { name: "GitHub", icon: FaGithub, color: "text-gray-800" },
+  { name: "Postman", icon: SiPostman, color: "text-orange-500" },
+  { name: "Figma", icon: FaFigma, color: "text-pink-500" },
+  { name: "Vite", icon: SiVite, color: "text-purple-500" },
 ];

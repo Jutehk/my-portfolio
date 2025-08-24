@@ -70,7 +70,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-white dark:bg-gray-900">
+    <section id="contact" className="section-padding bg-gray-50">
       <div className="container">
         <motion.div
           variants={containerVariants}
@@ -80,23 +80,23 @@ const Contact = () => {
           className="space-y-16"
         >
           <motion.div variants={itemVariants} className="text-center space-y-4">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-              Contact <span className="gradient-text">Me</span>
+            <h2 className="text-4xl font-bold text-gray-900">
+              Contact <span className="text-blue-600">Me</span>
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              I'd love to hear from you! Whether you have a question, a project in mind, or just want to connect — let's talk.
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Ready to discuss your QA needs? I'd love to hear about your project and how I can help ensure your software meets the highest quality standards.
             </p>
-            <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-full mx-auto" />
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-teal-600 rounded-full mx-auto" />
           </motion.div>
 
           <motion.div variants={itemVariants} className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Get in Touch</h3>
+              <h3 className="text-2xl font-bold text-gray-900">Get in Touch</h3>
 
               <ul className="space-y-4">
                 {contactDetails.map((item) => (
-                  <li key={item.id} className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
-                    <item.icon className="text-primary-600 dark:text-primary-400" size={24} />
+                  <li key={item.id} className="flex items-center gap-4 text-gray-700">
+                    <item.icon className="text-blue-600" size={24} />
                     <span>{item.value}</span>
                   </li>
                 ))}
@@ -107,7 +107,7 @@ const Contact = () => {
                   <a
                     key={link.id}
                     href={link.url}
-                    className="text-primary-600 dark:text-primary-400 hover:underline"
+                    className="text-blue-600 hover:text-blue-700 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -119,36 +119,36 @@ const Contact = () => {
             </div>
 
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Send a Message</h3>
+              <h3 className="text-2xl font-bold text-gray-900">Send a Message</h3>
 
               <form className="space-y-4" onSubmit={handleSubmit}>
                 <input
                   type="text"
                   name="name"
                   placeholder="Your Name"
-                  className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
                   required
                 />
                 <input
                   type="email"
                   name="email"
                   placeholder="Your Email"
-                  className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
                   required
                 />
                 <textarea
                   name="message"
                   placeholder="Your Message"
                   rows={5}
-                  className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
                   required
                 />
 
                 {status === 'success' && (
-                  <p className="text-green-600 dark:text-green-400">Message sent successfully!</p>
+                  <p className="text-green-600">Message sent successfully!</p>
                 )}
                 {status === 'error' && (
-                  <p className="text-red-600 dark:text-red-400">Oops! Something went wrong.</p>
+                  <p className="text-red-600">Oops! Something went wrong.</p>
                 )}
 
                 <motion.button
