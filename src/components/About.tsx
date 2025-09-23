@@ -103,10 +103,10 @@ const About = () => {
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center space-y-4">
-            <h2 className="text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
               About <span className="text-blue-600">Me</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
               A dedicated QA professional passionate about ensuring software excellence through 
               meticulous testing and quality assurance practices.
             </p>
@@ -114,10 +114,10 @@ const About = () => {
           </motion.div>
 
           {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Story Section */}
             <motion.div variants={itemVariants} className="space-y-6">
-              <h3 className="text-2xl font-bold text-gray-900">My QA Journey</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">My QA Journey</h3>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
                   My passion for software testing began during my studies in{' '}
@@ -148,7 +148,7 @@ const About = () => {
 
             {/* Achievements */}
             <motion.div variants={itemVariants} className="space-y-6">
-              <h3 className="text-2xl font-bold text-gray-900">Education & Goals</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Education & Goals</h3>
               <div className="space-y-4">
                 {achievements.map((achievement) => (
                   <motion.div
@@ -174,12 +174,12 @@ const About = () => {
           {/* QA Strengths Section */}
           <motion.div variants={itemVariants} className="space-y-8">
             <div className="text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">QA Expertise & Strengths</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">QA Expertise & Strengths</h3>
               <p className="text-gray-600">
                 Core competencies that drive my success in quality assurance
               </p>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
               {qaStrengths.map((strength) => (
                 <motion.div
                   key={strength.id}
@@ -191,7 +191,7 @@ const About = () => {
                     <div className="inline-flex items-center justify-center w-10 h-10 lg:w-12 lg:h-12 bg-blue-50 rounded-xl mb-2 lg:mb-4">
                       <strength.icon size={24} className="text-blue-600" />
                     </div>
-                    <h4 className="font-semibold text-gray-900 text-sm lg:text-base">{strength.title}</h4>
+                    <h4 className="font-semibold text-gray-900 text-sm sm:text-base">{strength.title}</h4>
                     <p className="text-sm text-gray-600">{strength.description}</p>
                   </div>
                 </motion.div>

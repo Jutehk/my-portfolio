@@ -80,10 +80,10 @@ const Contact = () => {
           className="space-y-16"
         >
           <motion.div variants={itemVariants} className="text-center space-y-4">
-            <h2 className="text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
               Contact <span className="text-blue-600">Me</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
               Ready to discuss your QA needs? I'd love to hear about your project and how I can help ensure your software meets the highest quality standards.
             </p>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-teal-600 rounded-full mx-auto" />
@@ -91,11 +91,11 @@ const Contact = () => {
 
           <motion.div variants={itemVariants} className="grid md:grid-cols-2 gap-12">
             <div className="space-y-4 lg:space-y-6">
-              <h3 className="text-2xl font-bold text-gray-900">Get in Touch</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Get in Touch</h3>
 
               <ul className="space-y-4">
                 {contactDetails.map((item) => (
-                  <li key={item.id} className="flex items-center gap-3 lg:gap-4 text-sm lg:text-base text-gray-700">
+                  <li key={item.id} className="flex items-center gap-3 lg:gap-4 text-sm sm:text-base text-gray-700">
                     <item.icon className="text-blue-600" size={24} />
                     <span>{item.value}</span>
                   </li>
@@ -119,36 +119,36 @@ const Contact = () => {
             </div>
 
             <div className="space-y-4 lg:space-y-6">
-              <h3 className="text-2xl font-bold text-gray-900">Send a Message</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Send a Message</h3>
 
               <form className="space-y-4" onSubmit={handleSubmit}>
                 <input
                   type="text"
                   name="name"
                   placeholder="Your Name"
-                  className="w-full p-2 lg:p-3 text-sm lg:text-base border border-gray-300 rounded-lg bg-white text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                  className="w-full p-3 text-sm sm:text-base border border-gray-300 rounded-lg bg-white text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
                   required
                 />
                 <input
                   type="email"
                   name="email"
                   placeholder="Your Email"
-                  className="w-full p-2 lg:p-3 text-sm lg:text-base border border-gray-300 rounded-lg bg-white text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                  className="w-full p-3 text-sm sm:text-base border border-gray-300 rounded-lg bg-white text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
                   required
                 />
                 <textarea
                   name="message"
                   placeholder="Your Message"
                   rows={5}
-                  className="w-full p-2 lg:p-3 text-sm lg:text-base border border-gray-300 rounded-lg bg-white text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                  className="w-full p-3 text-sm sm:text-base border border-gray-300 rounded-lg bg-white text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
                   required
                 />
 
                 {status === 'success' && (
-                  <p className="text-sm lg:text-base text-green-600">Message sent successfully!</p>
+                  <p className="text-sm sm:text-base text-green-600">Message sent successfully!</p>
                 )}
                 {status === 'error' && (
-                  <p className="text-sm lg:text-base text-red-600">Oops! Something went wrong.</p>
+                  <p className="text-sm sm:text-base text-red-600">Oops! Something went wrong.</p>
                 )}
 
                 <motion.button

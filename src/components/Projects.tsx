@@ -103,10 +103,10 @@ const Projects = () => {
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center space-y-4">
-            <h2 className="text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
               QA <span className="text-blue-600">Projects</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
               A showcase of my quality assurance projects demonstrating expertise in 
               manual testing, test automation, and comprehensive QA processes.
             </p>
@@ -116,7 +116,7 @@ const Projects = () => {
           {/* Projects Grid */}
           <motion.div
             variants={containerVariants}
-            className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
           >
             {qaProjects.map((project) => (
               <motion.div

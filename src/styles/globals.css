@@ -34,14 +34,38 @@
   }
   
   /* Mobile-specific utilities */
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .section-padding {
-      @apply py-8 px-4;
+      @apply py-12 px-4;
     }
     
     .container {
       @apply px-4;
     }
+    
+    /* Ensure sections are visible below navbar */
+    section {
+      @apply relative;
+    }
+    
+    #home {
+      @apply pt-20;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .section-padding {
+      @apply py-8 px-4;
+    }
+    
+    #home {
+      @apply pt-24;
+    }
+  }
+  
+  /* Ensure proper spacing for all sections */
+  section {
+    @apply scroll-mt-16;
   }
 }
 

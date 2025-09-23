@@ -32,31 +32,18 @@ const Home = () => {
       <div className="container">
         {/* Mobile Profile Picture - Only visible on small screens */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2 }}
-          className="md:hidden fixed top-4 left-4 z-40"
-        >
-          <img
-            src={profile}
-            alt="Juliana Ndunge"
-            className="w-12 h-12 rounded-full object-cover border-2 border-blue-500 shadow-lg"
-          />
-        </motion.div>
-
-        <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid lg:grid-cols-3 gap-12 items-start"
+          className="grid lg:grid-cols-3 gap-8 lg:gap-12 items-start"
         >
           {/* Profile Sidebar */}
-          <div className="lg:order-1 order-2 hidden md:block">
+          <div className="hidden lg:block lg:order-1">
             <ProfileSidebar />
           </div>
 
           {/* Main Content */}
-          <div className="md:lg:col-span-2 lg:order-2 order-1 space-y-8 md:col-span-full">
+          <div className="lg:col-span-2 lg:order-2 space-y-6 lg:space-y-8">
             <motion.div variants={itemVariants} className="space-y-6">
               <motion.div
                 initial={{ scale: 0 }}
@@ -69,12 +56,12 @@ const Home = () => {
               </motion.div>
               
               <div className="space-y-4">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-gray-900">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-gray-900">
                   Hello, I'm{' '}
                   <span className="text-blue-600 block">Juliana Ndunge</span>
                 </h1>
                 
-                <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-xl md:text-2xl text-gray-600">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-lg sm:text-xl md:text-2xl text-gray-600">
                   <motion.div
                     className="flex items-center gap-2"
                     whileHover={{ scale: 1.05 }}
@@ -95,7 +82,7 @@ const Home = () => {
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-6">
-              <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
                 A passionate Quality Assurance Engineer with expertise in{' '}
                 <span className="font-semibold text-blue-600">Manual Testing</span> and{' '}
                 <span className="font-semibold text-teal-600">Test Automation</span>.
@@ -105,7 +92,7 @@ const Home = () => {
                 <span className="font-semibold text-gray-800">PLP Academy</span>.
               </p>
               
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
                 I specialize in ensuring software quality through comprehensive testing strategies, 
                 automated test frameworks, and meticulous bug tracking. My goal is to deliver 
                 reliable, high-quality software that exceeds user expectations.
@@ -139,23 +126,23 @@ const Home = () => {
             {/* Stats */}
             <motion.div
               variants={itemVariants}
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-gray-200"
+              className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 pt-6 lg:pt-8 border-t border-gray-200"
             >
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-blue-600">2025</div>
-                <div className="text-sm text-gray-600">Graduate</div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-600">2025</div>
+                <div className="text-xs sm:text-sm text-gray-600">Graduate</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-blue-600">50+</div>
-                <div className="text-sm text-gray-600">Test Cases</div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-600">50+</div>
+                <div className="text-xs sm:text-sm text-gray-600">Test Cases</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-blue-600">15+</div>
-                <div className="text-sm text-gray-600">Projects Tested</div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-600">15+</div>
+                <div className="text-xs sm:text-sm text-gray-600">Projects Tested</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-blue-600">100%</div>
-                <div className="text-sm text-gray-600">Quality Focused</div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-600">100%</div>
+                <div className="text-xs sm:text-sm text-gray-600">Quality Focused</div>
               </div>
             </motion.div>
           </div>

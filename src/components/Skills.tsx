@@ -72,10 +72,10 @@ const Skills = () => {
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center space-y-4">
-            <h2 className="text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
               My <span className="text-blue-600">Skills</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
               A comprehensive skill set focused on quality assurance, testing methodologies, 
               and the technical tools needed to ensure software excellence.
             </p>
@@ -86,14 +86,14 @@ const Skills = () => {
           <motion.div variants={itemVariants} className="space-y-8">
             <div className="flex items-center gap-3 justify-center">
               <TestTube className="text-blue-600" size={28} />
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
                 Testing & Quality Assurance
               </h3>
             </div>
 
             <motion.div
               variants={containerVariants}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 lg:gap-4"
+              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-4"
             >
               {testingSkills.map((skill, index) => (
                 <SkillCard key={skill.name} skill={skill} index={index} />
@@ -105,14 +105,14 @@ const Skills = () => {
           <motion.div variants={itemVariants} className="space-y-8">
             <div className="flex items-center gap-3 justify-center">
               <Code className="text-teal-600" size={28} />
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
                 Programming Languages
               </h3>
             </div>
 
             <motion.div
               variants={containerVariants}
-              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 lg:gap-4"
+              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 lg:gap-4"
             >
               {programmingSkills.map((skill, index) => (
                 <SkillCard key={skill.name} skill={skill} index={index} />
@@ -124,14 +124,14 @@ const Skills = () => {
           <motion.div variants={itemVariants} className="space-y-8">
             <div className="flex items-center gap-3 justify-center">
               <Wrench className="text-green-600" size={28} />
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
                 Tools & Technologies
               </h3>
             </div>
 
             <motion.div
               variants={containerVariants}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 lg:gap-4"
+              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-4"
             >
               {toolsSkills.map((skill, index) => (
                 <SkillCard key={skill.name} skill={skill} index={index} />
@@ -142,9 +142,9 @@ const Skills = () => {
           {/* Call to Action */}
           <motion.div
             variants={itemVariants}
-            className="text-center bg-gray-50 rounded-2xl p-6 lg:p-8 border border-gray-200"
+            className="text-center bg-gray-50 rounded-2xl p-4 sm:p-6 lg:p-8 border border-gray-200"
           >
-            <h3 className="text-lg lg:text-xl font-semibold text-gray-900 mb-4">
+            <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 mb-4">
               Ready to put these skills to work for your team?
             </h3>
             <motion.a

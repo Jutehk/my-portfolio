@@ -82,10 +82,10 @@ const Services = () => {
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center space-y-4">
-            <h2 className="text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
               QA <span className="text-blue-600">Services</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
               Comprehensive quality assurance services to ensure your software meets the highest 
               standards of quality, reliability, and user satisfaction.
             </p>
@@ -95,7 +95,7 @@ const Services = () => {
           {/* Services Grid */}
           <motion.div
             variants={containerVariants}
-            className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
           >
             {services.map((service) => (
               <motion.div
@@ -139,12 +139,12 @@ const Services = () => {
           {/* Call to Action */}
           <motion.div
             variants={itemVariants}
-           className="text-center bg-blue-50 rounded-2xl p-6 lg:p-8 border border-blue-100"
+           className="text-center bg-blue-50 rounded-2xl p-4 sm:p-6 lg:p-8 border border-blue-100"
           >
-           <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
+           <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-4">
               Need Quality Assurance for Your Project?
             </h3>
-           <p className="text-sm lg:text-base text-gray-600 mb-6 max-w-2xl mx-auto">
+           <p className="text-sm sm:text-base text-gray-600 mb-6 max-w-2xl mx-auto">
               Let's discuss how I can help ensure your software meets the highest quality standards 
               and delivers exceptional user experiences.
             </p>
