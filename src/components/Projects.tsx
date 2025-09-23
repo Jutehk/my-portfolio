@@ -116,7 +116,7 @@ const Projects = () => {
           {/* Projects Grid */}
           <motion.div
             variants={containerVariants}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
           >
             {qaProjects.map((project) => (
               <motion.div
@@ -175,12 +175,12 @@ const Projects = () => {
                 </div>
 
                 {/* Project Content */}
-                <div className="p-6 space-y-4">
+                <div className="p-4 lg:p-6 space-y-4">
                   <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                     {project.title}
                   </h3>
 
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
                     {project.description}
                   </p>
 
@@ -189,7 +189,7 @@ const Projects = () => {
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-2 py-1 bg-blue-50 text-blue-700 text-xs rounded-full font-medium"
+                        className="px-2 py-1 bg-blue-50 text-blue-700 text-xs lg:text-sm rounded-full font-medium"
                       >
                         {tech}
                       </span>
@@ -197,13 +197,13 @@ const Projects = () => {
                   </div>
 
                   {/* Project Links */}
-                  <div className="flex items-center gap-4 pt-4 border-t border-gray-100">
+                  <div className="flex items-center gap-3 lg:gap-4 pt-4 border-t border-gray-100">
                     {project.demo !== "#" && (
                       <motion.a
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors text-sm"
+                        className="flex items-center gap-1 lg:gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors text-xs lg:text-sm"
                         whileHover={{ x: 5 }}
                       >
                         <ExternalLink size={16} />
@@ -216,7 +216,7 @@ const Projects = () => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-gray-600 hover:text-gray-800 font-medium transition-colors text-sm"
+                        className="flex items-center gap-1 lg:gap-2 text-gray-600 hover:text-gray-800 font-medium transition-colors text-xs lg:text-sm"
                         whileHover={{ x: 5 }}
                       >
                         <FaGithub size={16} />

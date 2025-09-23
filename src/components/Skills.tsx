@@ -93,7 +93,7 @@ const Skills = () => {
 
             <motion.div
               variants={containerVariants}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 lg:gap-4"
             >
               {testingSkills.map((skill, index) => (
                 <SkillCard key={skill.name} skill={skill} index={index} />
@@ -112,7 +112,7 @@ const Skills = () => {
 
             <motion.div
               variants={containerVariants}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4"
+              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 lg:gap-4"
             >
               {programmingSkills.map((skill, index) => (
                 <SkillCard key={skill.name} skill={skill} index={index} />
@@ -131,7 +131,7 @@ const Skills = () => {
 
             <motion.div
               variants={containerVariants}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 lg:gap-4"
             >
               {toolsSkills.map((skill, index) => (
                 <SkillCard key={skill.name} skill={skill} index={index} />
@@ -142,9 +142,9 @@ const Skills = () => {
           {/* Call to Action */}
           <motion.div
             variants={itemVariants}
-            className="text-center bg-gray-50 rounded-2xl p-8 border border-gray-200"
+            className="text-center bg-gray-50 rounded-2xl p-6 lg:p-8 border border-gray-200"
           >
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            <h3 className="text-lg lg:text-xl font-semibold text-gray-900 mb-4">
               Ready to put these skills to work for your team?
             </h3>
             <motion.a

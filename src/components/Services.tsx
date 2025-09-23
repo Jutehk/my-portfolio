@@ -95,7 +95,7 @@ const Services = () => {
           {/* Services Grid */}
           <motion.div
             variants={containerVariants}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
           >
             {services.map((service) => (
               <motion.div
@@ -105,26 +105,26 @@ const Services = () => {
                   y: -10,
                   transition: { duration: 0.3 },
                 }}
-                className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100"
+                className="bg-white p-6 lg:p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 <div className="space-y-6">
                   {/* Icon */}
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-50 rounded-xl">
+                  <div className="inline-flex items-center justify-center w-12 h-12 lg:w-16 lg:h-16 bg-blue-50 rounded-xl">
                     <service.icon size={32} className="text-blue-600" />
                   </div>
 
                   {/* Content */}
                   <div className="space-y-4">
-                    <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                    <h3 className="text-lg lg:text-xl font-bold text-gray-900">{service.title}</h3>
+                    <p className="text-sm lg:text-base text-gray-600 leading-relaxed">{service.description}</p>
                   </div>
 
                   {/* Features */}
                   <div className="space-y-2">
-                    <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>
+                    <h4 className="font-semibold text-gray-900 text-xs lg:text-sm">Key Features:</h4>
                     <ul className="space-y-1">
                       {service.features.map((feature, index) => (
-                        <li key={index} className="text-sm text-gray-600 flex items-center gap-2">
+                        <li key={index} className="text-xs lg:text-sm text-gray-600 flex items-center gap-2">
                           <div className="w-1.5 h-1.5 bg-blue-600 rounded-full" />
                           {feature}
                         </li>
@@ -139,12 +139,12 @@ const Services = () => {
           {/* Call to Action */}
           <motion.div
             variants={itemVariants}
-            className="text-center bg-blue-50 rounded-2xl p-8 border border-blue-100"
+           className="text-center bg-blue-50 rounded-2xl p-6 lg:p-8 border border-blue-100"
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+           <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
               Need Quality Assurance for Your Project?
             </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+           <p className="text-sm lg:text-base text-gray-600 mb-6 max-w-2xl mx-auto">
               Let's discuss how I can help ensure your software meets the highest quality standards 
               and delivers exceptional user experiences.
             </p>

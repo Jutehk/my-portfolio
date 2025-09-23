@@ -114,7 +114,7 @@ const About = () => {
           </motion.div>
 
           {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
             {/* Story Section */}
             <motion.div variants={itemVariants} className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900">My QA Journey</h3>
@@ -179,19 +179,19 @@ const About = () => {
                 Core competencies that drive my success in quality assurance
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
               {qaStrengths.map((strength) => (
                 <motion.div
                   key={strength.id}
                   variants={itemVariants}
-                  className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
+                  className="bg-white p-4 lg:p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
                   whileHover={{ scale: 1.05, y: -5 }}
                 >
                   <div className="text-center space-y-4">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-50 rounded-xl mb-4">
+                    <div className="inline-flex items-center justify-center w-10 h-10 lg:w-12 lg:h-12 bg-blue-50 rounded-xl mb-2 lg:mb-4">
                       <strength.icon size={24} className="text-blue-600" />
                     </div>
-                    <h4 className="font-semibold text-gray-900">{strength.title}</h4>
+                    <h4 className="font-semibold text-gray-900 text-sm lg:text-base">{strength.title}</h4>
                     <p className="text-sm text-gray-600">{strength.description}</p>
                   </div>
                 </motion.div>
@@ -202,9 +202,9 @@ const About = () => {
           {/* Call to Action */}
           <motion.div
             variants={itemVariants}
-            className="text-center bg-blue-50 rounded-2xl p-8 border border-blue-100"
+            className="text-center bg-blue-50 rounded-2xl p-6 lg:p-8 border border-blue-100"
           >
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            <h3 className="text-lg lg:text-xl font-semibold text-gray-900 mb-4">
               Ready to ensure your software quality?
             </h3>
             <motion.a

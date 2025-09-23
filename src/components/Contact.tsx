@@ -90,12 +90,12 @@ const Contact = () => {
           </motion.div>
 
           <motion.div variants={itemVariants} className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-6">
+            <div className="space-y-4 lg:space-y-6">
               <h3 className="text-2xl font-bold text-gray-900">Get in Touch</h3>
 
               <ul className="space-y-4">
                 {contactDetails.map((item) => (
-                  <li key={item.id} className="flex items-center gap-4 text-gray-700">
+                  <li key={item.id} className="flex items-center gap-3 lg:gap-4 text-sm lg:text-base text-gray-700">
                     <item.icon className="text-blue-600" size={24} />
                     <span>{item.value}</span>
                   </li>
@@ -107,18 +107,18 @@ const Contact = () => {
                   <a
                     key={link.id}
                     href={link.url}
-                    className="text-blue-600 hover:text-blue-700 transition-colors"
+                    className="text-blue-600 hover:text-blue-700 transition-colors p-2"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <link.icon size={24} />
+                    <link.icon size={20} />
                     <span className="sr-only">{link.label}</span>
                   </a>
                 ))}
               </div>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4 lg:space-y-6">
               <h3 className="text-2xl font-bold text-gray-900">Send a Message</h3>
 
               <form className="space-y-4" onSubmit={handleSubmit}>
@@ -126,29 +126,29 @@ const Contact = () => {
                   type="text"
                   name="name"
                   placeholder="Your Name"
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                  className="w-full p-2 lg:p-3 text-sm lg:text-base border border-gray-300 rounded-lg bg-white text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
                   required
                 />
                 <input
                   type="email"
                   name="email"
                   placeholder="Your Email"
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                  className="w-full p-2 lg:p-3 text-sm lg:text-base border border-gray-300 rounded-lg bg-white text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
                   required
                 />
                 <textarea
                   name="message"
                   placeholder="Your Message"
                   rows={5}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                  className="w-full p-2 lg:p-3 text-sm lg:text-base border border-gray-300 rounded-lg bg-white text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
                   required
                 />
 
                 {status === 'success' && (
-                  <p className="text-green-600">Message sent successfully!</p>
+                  <p className="text-sm lg:text-base text-green-600">Message sent successfully!</p>
                 )}
                 {status === 'error' && (
-                  <p className="text-red-600">Oops! Something went wrong.</p>
+                  <p className="text-sm lg:text-base text-red-600">Oops! Something went wrong.</p>
                 )}
 
                 <motion.button

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, TestTube, Shield, Sparkles } from 'lucide-react';
 import ProfileSidebar from './ProfileSidebar';
+import profile from '../assets/profile.jpg';
 
 const Home = () => {
   const containerVariants = {
@@ -29,6 +30,20 @@ const Home = () => {
   return (
     <section id="home" className="min-h-screen flex items-center section-padding pt-24 bg-gradient-to-br from-gray-50 to-white">
       <div className="container">
+        {/* Mobile Profile Picture - Only visible on small screens */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2 }}
+          className="md:hidden fixed top-4 left-4 z-40"
+        >
+          <img
+            src={profile}
+            alt="Juliana Ndunge"
+            className="w-12 h-12 rounded-full object-cover border-2 border-blue-500 shadow-lg"
+          />
+        </motion.div>
+
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -36,12 +51,12 @@ const Home = () => {
           className="grid lg:grid-cols-3 gap-12 items-start"
         >
           {/* Profile Sidebar */}
-          <div className="lg:order-1 order-2">
+          <div className="lg:order-1 order-2 hidden md:block">
             <ProfileSidebar />
           </div>
 
           {/* Main Content */}
-          <div className="lg:col-span-2 lg:order-2 order-1 space-y-8">
+          <div className="md:lg:col-span-2 lg:order-2 order-1 space-y-8 md:col-span-full">
             <motion.div variants={itemVariants} className="space-y-6">
               <motion.div
                 initial={{ scale: 0 }}
