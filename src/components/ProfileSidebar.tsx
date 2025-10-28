@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Calendar, GraduationCap } from "lucide-react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import profileImage from "../assets/IMG_20250916_092414.jpg";
 
 const ProfileSidebar = () => {
   const personalInfo = [
@@ -67,7 +68,7 @@ const ProfileSidebar = () => {
           transition={{ duration: 0.3 }}
         >
           <img
-            src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
+            src={profileImage}
             alt="Juliana Ndunge"
             className="w-32 h-32 rounded-full object-cover border-4 border-blue-500 shadow-lg"
           />
@@ -126,8 +127,8 @@ const ProfileSidebar = () => {
 
       {/* Download CV Button */}
       <motion.a
-        href="/Juliana_Ndunge_QA_CV.pdf"
-        download
+        href="/Juliana_Ndunge_QualityAssurance_Resume.pdf"
+        download="Juliana_Ndunge_QualityAssurance_Resume.pdf"
         className="w-full btn-primary text-center text-sm py-2"
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}

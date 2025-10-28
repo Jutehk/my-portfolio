@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import profileImage from '../assets/IMG_20250916_092414.jpg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +37,7 @@ const Navbar = () => {
       {/* Mobile Profile Picture */}
       <div className="lg:hidden fixed top-4 left-4 z-50">
         <img
-          src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
+          src={profileImage}
           alt="Juliana Ndunge"
           className="w-12 h-12 rounded-full object-cover border-2 border-blue-500 shadow-lg"
         />
