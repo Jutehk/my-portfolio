@@ -98,8 +98,8 @@ const About = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          className="space-y-16"
+          viewport={{ once: true, amount: 0.1 }}
+          className="space-y-8 lg:space-y-16"
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center space-y-4">
@@ -172,10 +172,10 @@ const About = () => {
           </div>
 
           {/* QA Strengths Section */}
-          <motion.div variants={itemVariants} className="space-y-8">
+          <motion.div variants={itemVariants} className="space-y-6 lg:space-y-8">
             <div className="text-center">
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">QA Expertise & Strengths</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 lg:mb-4">QA Expertise & Strengths</h3>
+              <p className="text-sm sm:text-base text-gray-600">
                 Core competencies that drive my success in quality assurance
               </p>
             </div>

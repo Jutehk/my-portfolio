@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Calendar, GraduationCap } from "lucide-react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import profile from "../assets/profile.jpg";
 
 const ProfileSidebar = () => {
   const personalInfo = [
@@ -68,7 +67,7 @@ const ProfileSidebar = () => {
           transition={{ duration: 0.3 }}
         >
           <img
-            src={profile}
+            src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
             alt="Juliana Ndunge"
             className="w-32 h-32 rounded-full object-cover border-4 border-blue-500 shadow-lg"
           />

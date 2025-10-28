@@ -67,8 +67,8 @@ const Skills = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="space-y-16"
+          viewport={{ once: true, amount: 0.1 }}
+          className="space-y-8 lg:space-y-16"
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center space-y-4">
@@ -83,10 +83,10 @@ const Skills = () => {
           </motion.div>
 
           {/* Testing & QA Skills */}
-          <motion.div variants={itemVariants} className="space-y-8">
-            <div className="flex items-center gap-3 justify-center">
-              <TestTube className="text-blue-600" size={28} />
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
+          <motion.div variants={itemVariants} className="space-y-6 lg:space-y-8">
+            <div className="flex items-center gap-2 lg:gap-3 justify-center">
+              <TestTube className="text-blue-600" size={24} />
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
                 Testing & Quality Assurance
               </h3>
             </div>
@@ -102,10 +102,10 @@ const Skills = () => {
           </motion.div>
 
           {/* Programming Languages */}
-          <motion.div variants={itemVariants} className="space-y-8">
-            <div className="flex items-center gap-3 justify-center">
-              <Code className="text-teal-600" size={28} />
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
+          <motion.div variants={itemVariants} className="space-y-6 lg:space-y-8">
+            <div className="flex items-center gap-2 lg:gap-3 justify-center">
+              <Code className="text-teal-600" size={24} />
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
                 Programming Languages
               </h3>
             </div>
@@ -121,10 +121,10 @@ const Skills = () => {
           </motion.div>
 
           {/* Tools & Technologies */}
-          <motion.div variants={itemVariants} className="space-y-8">
-            <div className="flex items-center gap-3 justify-center">
-              <Wrench className="text-green-600" size={28} />
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
+          <motion.div variants={itemVariants} className="space-y-6 lg:space-y-8">
+            <div className="flex items-center gap-2 lg:gap-3 justify-center">
+              <Wrench className="text-green-600" size={24} />
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
                 Tools & Technologies
               </h3>
             </div>

@@ -26,7 +26,7 @@
   }
   
   .section-padding {
-    @apply py-12 lg:py-20 px-4 sm:px-6 lg:px-8;
+    @apply py-10 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-8;
   }
   
   .container {
@@ -36,30 +36,37 @@
   /* Mobile-specific utilities */
   @media (max-width: 1024px) {
     .section-padding {
-      @apply py-12 px-4;
+      @apply py-10 px-4;
     }
-    
+
     .container {
       @apply px-4;
     }
-    
+
     /* Ensure sections are visible below navbar */
     section {
       @apply relative;
     }
-    
+
     #home {
       @apply pt-20;
+      min-height: auto;
     }
   }
-  
+
   @media (max-width: 640px) {
     .section-padding {
       @apply py-8 px-4;
     }
-    
+
     #home {
-      @apply pt-24;
+      @apply pt-20 pb-8;
+    }
+
+    /* Reduce spacing on mobile to fit content */
+    #about .space-y-16,
+    #skills .space-y-16 {
+      @apply space-y-6;
     }
   }
   

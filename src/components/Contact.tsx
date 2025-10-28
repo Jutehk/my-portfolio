@@ -89,7 +89,7 @@ const Contact = () => {
             <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-teal-600 rounded-full mx-auto" />
           </motion.div>
 
-          <motion.div variants={itemVariants} className="grid md:grid-cols-2 gap-12">
+          <motion.div variants={itemVariants} className="grid md:grid-cols-2 gap-8 lg:gap-12">
             <div className="space-y-4 lg:space-y-6">
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Get in Touch</h3>
 

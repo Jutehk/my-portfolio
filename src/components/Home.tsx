@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, TestTube, Shield, Sparkles } from 'lucide-react';
 import ProfileSidebar from './ProfileSidebar';
-import profile from '../assets/profile.jpg';
 
 const Home = () => {
   const containerVariants = {
@@ -28,7 +27,7 @@ const Home = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center section-padding pt-24 bg-gradient-to-br from-gray-50 to-white">
+    <section id="home" className="min-h-[calc(100vh-4rem)] lg:min-h-screen flex items-center section-padding pt-24 bg-gradient-to-br from-gray-50 to-white">
       <div className="container">
         {/* Mobile Profile Picture - Only visible on small screens */}
         <motion.div
